@@ -1,0 +1,19 @@
+.Movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Movie {
+  width: 300px;
+}
+
+.MovieImage {
+  width: 100%;
+}
+
+.Name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

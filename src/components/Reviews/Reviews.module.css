@@ -1,0 +1,10 @@
+.Reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Review {
+  padding: 24px;
+  width: 600px;
+}

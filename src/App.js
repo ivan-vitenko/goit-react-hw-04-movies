@@ -6,7 +6,10 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // import { ToastContainer } from 'react-toastify';
 // import { toast } from 'react-toastify';
 
+import Navigation from './components/Navigation/Navigation';
 import HomePage from './components/HomePage/HomePage';
+import MoviesPage from './components/MoviesPage/MoviesPage';
+import MovieDetailsPage from './components/MovieDetailsPage/MovieDetailsPage';
 
 function App() {
   // const [query, setQuery] = useState('');
@@ -55,14 +58,31 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={<h1>ЗАГРУЖАЕМ МАРШРУТ...</h1>}>
-        <BrowserRouter>
-          {/* <Switch> */}
-          <Route path="/" exact component={HomePage} />
-          {/* </Route> */}
-          {/* </Switch> */}
-        </BrowserRouter>
-      </Suspense>
+      <BrowserRouter>
+        <Navigation />
+
+        <Suspense fallback={<h1>ЗАГРУЖАЕМ МАРШРУТ...</h1>}>
+          <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/movies" exact component={MoviesPage} />
+            <Route path="/movies/:movieId" exact component={MovieDetailsPage} />
+
+            <Route
+              path="/movies/:movieId/cast"
+              exact
+              component={MovieDetailsPage}
+            />
+
+            <Route
+              path="/movies/:movieId/reviews"
+              exact
+              component={MovieDetailsPage}
+            />
+
+            <Route path="*" exact component={HomePage} />
+          </Switch>
+        </Suspense>
+      </BrowserRouter>
     </>
   );
 }

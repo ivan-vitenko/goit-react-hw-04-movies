@@ -1,0 +1,23 @@
+.Cast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.CastItem {
+  width: 92px;
+}
+
+.Photo {
+  /* width: 92px; */
+}
+
+.Name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+}

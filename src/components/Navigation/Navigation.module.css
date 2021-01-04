@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: inline-block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.activeLink {
+  color: brown;
+}

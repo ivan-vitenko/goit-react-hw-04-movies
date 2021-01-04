@@ -1,0 +1,30 @@
+.Container {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.SubContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 300px; */
+}
+
+.Poster {
+  width: 300px;
+}
+
+.TextContentContainer {
+  width: 300px;
+  padding: 12px;
+}
+
+.AddInfoContainer {
+  padding: 12px;
+}
+
+.Back {
+  display: inline-block;
+  margin-bottom: 12px;
+}
